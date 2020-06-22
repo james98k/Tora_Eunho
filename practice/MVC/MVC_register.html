@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+<script type="text/javascript"; src = "MVC_Model.js"></script>
+    
+    <style>
+        .main_div{
+           width: 99%;
+            background-color: aqua;
+            
+        }
+        .text_descript{
+/*            border:1px solid red;*/
+            width: 33%;    
+            float: left;
+        }
+        
+        .text_input_box{
+/*            border: 1px solid green;*/
+            width:  33%;
+            float: left;
+            margin-top: -8px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class = "main_div">
+        <div class = "text_descript">
+            <p>input your ID</p>
+            <p>input your Password</p>
+        </div>
+    
+        <div class = "text_input_box">
+            <div class = "text_input_main"><br>
+                <input id = "register_id"><br><br>
+                <input id = "register_password">
+            </div>
+            <button onclick="sign_up()">register</button>
+            
+            <button onclick = "location.href=' MVC_View.html'">go back to login</button>
+            
+        </div>
+    </div>
+    
+</body>
+
+</html>

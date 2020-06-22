@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script>
+        var id;
+        
+        function updater(){
+            id = document.getElementById("input_id").value;
+            alert(id);
+            document.getElementById("result").innerHTML = id;
+        }
+    </script>
+    
+  <title></title>
+</head>
+
+<body>
+    <input id = "input_id">
+    <button onclick = "updater()">update</button>
+    <p id = "result">null</p>
+</body>
+</html>

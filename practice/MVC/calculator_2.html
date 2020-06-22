@@ -1,0 +1,130 @@
+<!doctype HTML>
+<html>
+    <head>
+        <script>
+
+            
+//controller side            
+            
+            var numberClicked = false;
+            function add(char){
+                if(numberClicked == false){
+                    if (isNaN == true) {}
+                    else { document.getElementById('display').value += char; }
+                    }
+                else{
+                    document.getElementById('display').value
+                }
+                if(isNaN(char) == true){
+                    numberClicked = false;
+                }else{
+                    numberClicked = true;
+                    }
+                }
+            
+//            function add(char){
+//                var display = document.getElementById('display');
+//                
+////                display의 value를 가져온다
+//                //display.value + char은 숫자 + 문자로 연산자를 가져온다.
+//                
+//                display.value = display.value + char;
+//                
+//                //add function is not about adding numbers, but including calculators.
+//                //--> think of list. enques calculator at the end.
+//            }
+            
+            
+            function calculate(){
+                var display = document.getElementById('display');
+                var result = eval(display.value);
+            }
+            
+            
+            function result(){
+                var display = document.getElementById('display');
+                var result = eval(display.value);
+                document.getElementById('result').value = result;
+            }
+            
+            
+            function reset(){
+                document.getElementById('display').value = "";
+                document.getElementById('result').value = "";
+            }
+            
+        </script>
+        
+        
+        
+        <style>
+            table{
+                border-collapse: collapse;
+            }
+            
+            td{
+                padding : 5px 10px ;
+                text-align: center ;
+            }
+            
+            input {
+                border : none ;
+                text-align: right;
+            }
+            input: focus{
+                outline: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+<!--    view side    -->
+        <table border = "1">
+            <tr>
+                <td colspan="4">
+                    <input type = "text" id = "display">
+                </td>
+            </tr>
+            <tr>
+                <td colspan = "4">
+                    <input type = "text" id = "result">
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="3" onclick = "reset()">AC</td>
+                <td onclick="add('/')">/</td>
+            </tr>
+            <tr>
+                <td onclick = "add(7)">7</td>
+                <td onclick = "add(8)">8</td>
+                <td onclick = "add(9)">9</td>
+                <td onclick = "add('*')">*</td>
+            </tr>
+            
+            <tr>
+                <td onclick = "add(4)">4</td>
+                <td onclick = "add(5)">5</td>
+                <td onclick = "add(6)">6</td>
+                <td onclick = "add('-')">-</td>
+            </tr>
+            <tr>
+                <td onclick = "add(1)">1</td>
+                <td onclick = "add(2)">2</td>
+                <td onclick = "add(3)">3</td>
+                <td onclick = "add('+')">+</td>
+            </tr>
+            <tr>
+                <td colspan = "2"; onclick="add(0)">0</td>
+                <td onclick = "add('.')">.</td>
+                <td onclick = "result()">=</td>
+            </tr>
+        </table>
+        
+        
+        
+    </body>
+
+
+
+</html>
