@@ -1,2 +1,0 @@
-Github
-Tora_Eunho
